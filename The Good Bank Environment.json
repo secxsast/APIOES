@@ -1,0 +1,14 @@
+{
+	"id": "1e57b415-ab9e-4028-bb73-b276d28458ac",
+	"name": "The Good Bank Environment",
+	"values": [
+		{
+			"key": "host",
+			"value": "http://security.postman-breakable.com",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-09-23T17:32:52.863Z",
+	"_postman_exported_using": "Postman/8.12.0"
+}
