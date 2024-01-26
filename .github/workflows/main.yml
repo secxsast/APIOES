@@ -22,6 +22,7 @@ jobs:
          cx_client_id: ${{ secrets.CLIENT_ID }}
          cx_client_secret: ${{ secrets.SECRET }}
          branch: ${{ github.ref }}
+         --debug
          additional_params:
-         --Debug
+         
          
