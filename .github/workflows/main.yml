@@ -23,5 +23,5 @@ jobs:
          cx_client_secret: ${{ secrets.SECRET }}
          branch: ${{ github.ref }}
          additional_params:
-         --debug
+         --Debug
          
