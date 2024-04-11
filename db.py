@@ -6,7 +6,7 @@ from core.constants import USER_TABLE
 class DB:
     @staticmethod
     def initialize_db():
-        connection = sqlite3.connect('db.sqlite3')
+        connection = sqlite3.connect('dbA.sqlite3')
         logging.info(f'User table is not {USER_TABLE}')
         connection.execute(f'CREATE TABLE {USER_TABLE} (user_id string, username varchar(255), email_id varchar(255), phone varchar(255), password varchar(1023), employee int, failed_logins int, session_token varchar(1023))')
         connection.execute(f'CREATE TABLE account_summary (user_id string, balance real, last_transaction real)')
