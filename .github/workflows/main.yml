@@ -25,5 +25,6 @@ jobs:
          branch: ${{ github.ref }}
          additional_params:
           --debug
+          --threshold "sast-high=1; sast-medium=10; sca-high=10; containers-high=10"
          
          
