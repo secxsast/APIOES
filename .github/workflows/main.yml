@@ -14,6 +14,17 @@ jobs:
     steps:
      - name: Checkout
        uses: actions/checkout@v2
+
+     - name: Checkmarx DAST Github Action
+       uses: Checkmarx/dast-github-action@v1.0.0-beta
+       env:
+        CX_APIKEY: ${{ secrets.CX_ONE_API_KEY }}
+       with:
+        command: "web"
+        config: 'security_tweets.yaml'
+        base_url: "testhtml5.vulnweb.com"
+        environment_id: "81fd9e39-9843-441d-bd86-d7d343eb06dc"
+        
      - name: Checkmarx AST CLI Action
        uses: Checkmarx/ast-github-action@main
        with:
@@ -35,8 +46,4 @@ jobs:
         command: "web"
         config: 'security_tweets.yaml'
         base_url: "http://testhtml5.vulnweb.com"
-        environment_id: "81fd9e39-9843-441d-bd86-d7d343eb06dc"
-        fail_on: "HIGH"
-        verbose: true
-         
-         
+        environment_id: "81fd9e39-9843-441d-bd86-d7d343eb06dc"  
