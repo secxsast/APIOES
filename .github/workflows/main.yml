@@ -28,7 +28,7 @@ jobs:
           --threshold "sast-high=50; sast-medium=500; sca-high=500; containers-high=500"
           
      - name: Checkmarx DAST Github Action
-       uses: checkmarx/dast-github-action@v1.0
+       uses: Checkmarx/dast-github-action@v1.0.0-beta
        env:
         CX_APIKEY: ${{ secrets.CX_ONE_API_KEY }}
        with:
