@@ -20,10 +20,10 @@ jobs:
        env:
         CX_APIKEY: ${{ secrets.CX_ONE_API_KEY }}
        with:
-          command: "web"
+          command: 'web'
           config: 'security_tweets.yaml'
           base_url: "http://ast.checkmarx.net"
-          environment_id: "81fd9e39-9843-441d-bd86-d7d343eb06dc"
+          environment_id: '81fd9e39-9843-441d-bd86-d7d343eb06dc'
           log_level: debug
           verbose: true
      - uses: actions/upload-artifact@v4
