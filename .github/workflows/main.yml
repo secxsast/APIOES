@@ -30,7 +30,7 @@ jobs:
        name: Upload Logs
        with:
         name: report
-        path: ./output
+        path: './'
                
      - name: Checkmarx AST CLI Action
        uses: Checkmarx/ast-github-action@main
