@@ -22,7 +22,7 @@ jobs:
        with:
         command: "web"
         config: 'security_tweets.yaml'
-        base_url: "https://testhtml5.vulnweb.com"
+        base_url: "https://ast.checkmarx.net"
         environment_id: "81fd9e39-9843-441d-bd86-d7d343eb06dc"
         
      - name: Checkmarx AST CLI Action
