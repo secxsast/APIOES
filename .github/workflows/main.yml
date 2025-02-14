@@ -27,9 +27,7 @@ jobs:
           
      - uses: actions/upload-artifact@v4
        name: Upload Logs
-       with:
-        name: report
-               
+                     
      - name: Checkmarx AST CLI Action
        uses: Checkmarx/ast-github-action@main
        with:
