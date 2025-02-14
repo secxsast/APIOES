@@ -29,7 +29,6 @@ jobs:
        name: Upload Logs
        with:
         name: report
-        path: './.github/workflows'
                
      - name: Checkmarx AST CLI Action
        uses: Checkmarx/ast-github-action@main
