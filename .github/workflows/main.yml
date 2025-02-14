@@ -24,9 +24,6 @@ jobs:
           config: 'security_tweets.yaml'
           base_url: "http://ast.checkmarx.net"
           environment_id: '81fd9e39-9843-441d-bd86-d7d343eb06dc'
-          
-     - uses: actions/upload-artifact@v4
-       name: Upload Logs
                      
      - name: Checkmarx AST CLI Action
        uses: Checkmarx/ast-github-action@main
