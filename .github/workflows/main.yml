@@ -16,7 +16,7 @@ jobs:
        uses: actions/checkout@v2
        
      - name: Run Checkmarx DAST Scan
-       uses: Checkmarx/dast-github-action@v1.0.6
+       uses: Checkmarx/dast-github-action@v1.0.5
        env:
         CX_APIKEY: ${{ secrets.CX_ONE_API_KEY }}
        with:
@@ -24,7 +24,14 @@ jobs:
           config: 'security_tweets.yaml'
           base_url: "http://ast.checkmarx.net"
           environment_id: '81fd9e39-9843-441d-bd86-d7d343eb06dc'
-                     
+          log_level: debug
+          verbose: true
+     - uses: actions/upload-artifact@v4
+       name: Upload Logs
+       with:
+        name: report
+        path: './.github/workflows'
+               
      - name: Checkmarx AST CLI Action
        uses: Checkmarx/ast-github-action@main
        with:
