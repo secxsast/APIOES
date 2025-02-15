@@ -15,8 +15,6 @@ jobs:
     steps:
      - name: Checkout
        uses: actions/checkout@v3
-     - name: Test Connectivity
-       run: nc -vz iam.checkmarx.net 443 
      - name: Run Checkmarx DAST Scan
        uses: Checkmarx/dast-github-action@v2.3.0
        env:
