@@ -9,21 +9,12 @@ on:
      - main
      - develop
 
-permissions:
-  contents: write
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-  
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
      - name: Checkout
        uses: actions/checkout@v3
-     - name: Change dir owner
-       run: sudo chown -R 1000:1000 ${{ github.workspace }}        
      - name: Test Connectivity
        run: nc -vz iam.checkmarx.net 443 
      - name: Run Checkmarx DAST Scan
@@ -34,7 +25,7 @@ jobs:
           command: web
           config: './security_tweets.yaml'
           environment_id: '81fd9e39-9843-441d-bd86-d7d343eb06dc'
-          log_level: info
+          log_level: debug
           base_url: "https://ast.checkmarx.net"
           
      - name: Checkmarx AST CLI Action
