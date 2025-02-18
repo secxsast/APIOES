@@ -42,6 +42,3 @@ jobs:
          cx_client_id: ${{ secrets.CLIENT_ID }}
          cx_client_secret: ${{ secrets.SECRET }}
          branch: ${{ github.ref }}
-         additional_params:
-          --debug
-          --threshold "sast-high=50; sast-medium=500; sca-high=500; containers-high=500"
