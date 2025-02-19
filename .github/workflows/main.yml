@@ -19,6 +19,17 @@ jobs:
     steps:
      - name: Checkout
        uses: actions/checkout@v3
+                            
+     - name: Checkmarx AST CLI Action
+       uses: Checkmarx/ast-github-action@main
+       with:
+         project_name: ${{ github.repository }}
+         cx_tenant: nfr_trustdimension
+         base_uri: https://ast.checkmarx.net
+         cx_client_id: ${{ secrets.CLIENT_ID }}
+         cx_client_secret: ${{ secrets.SECRET }}
+         branch: ${{ github.ref }}
+
      - name: Change dir owner
        run: sudo chown -R 1000:1000 ${{ github.workspace }}        
      - name: Test Connectivity
@@ -32,13 +43,3 @@ jobs:
           config: 'security_tweets.yaml'
           base_url: "http://ast.checkmarx.net"
           environment_id: '81fd9e39-9843-441d-bd86-d7d343eb06dc'
-                         
-     - name: Checkmarx AST CLI Action
-       uses: Checkmarx/ast-github-action@main
-       with:
-         project_name: ${{ github.repository }}
-         cx_tenant: nfr_trustdimension
-         base_uri: https://ast.checkmarx.net
-         cx_client_id: ${{ secrets.CLIENT_ID }}
-         cx_client_secret: ${{ secrets.SECRET }}
-         branch: ${{ github.ref }}
