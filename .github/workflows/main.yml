@@ -1,4 +1,4 @@
-name: ASTCxONE
+name: ASTC
 on:
   push:
    branches:
