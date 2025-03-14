@@ -1,4 +1,4 @@
-name: AST
+name: DAST
 on:
   push:
    branches:
