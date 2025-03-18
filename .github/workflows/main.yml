@@ -1,4 +1,4 @@
-name: DAST
+name: Pruebas
 on:
   push:
    branches:
