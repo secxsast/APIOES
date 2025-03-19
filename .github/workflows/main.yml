@@ -1,4 +1,4 @@
-name: Pruebas_DevSecOps
+name: Pruebas_SecOps
 on:
   push:
    branches:
