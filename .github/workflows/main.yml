@@ -1,4 +1,4 @@
-name: SecOps
+name: Sec
 on:
   push:
    branches:
